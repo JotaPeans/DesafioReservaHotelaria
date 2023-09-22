@@ -17,10 +17,12 @@ namespace DesafioReservaHotelaria.Models
 
         public void CadastrarHospedes(List<Pessoa> hospedes) {
             Hospedes ??= new();
-            foreach(Pessoa pessoa in hospedes) {
-                if(Hospedes.Count < Suite.Capacidade) Hospedes.Add(pessoa);
-                else Console.WriteLine("Capacidade Máxima Atingida");
+            if(hospedes.Count < Suite.Capacidade) {
+                foreach(Pessoa pessoa in hospedes) {
+                    Hospedes.Add(pessoa);
+                }
             }
+            else throw new Exception("A quantidade de hóspedes não pode execeder a capacidade da suíte");
             
         }
 

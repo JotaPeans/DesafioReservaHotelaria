@@ -19,7 +19,7 @@ namespace DesafioReservaHotelaria
             hospedes.Add(p2);
             hospedes.Add(p3);
 
-            Suite suite = new(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30.00M);
+            Suite suite = new(tipoSuite: "Premium", capacidade: 3, valorDiaria: 30.00M);
 
             Reserva reserva = new(diasReservados: 10);
 
